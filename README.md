@@ -41,43 +41,33 @@ than one argument.
 
 
 #### Data types
----
 > TODO - Add content
 
 #### User Defined Types
----
 > TODO - Add content
 
 #### Operators
----
 > TODO - Add content
 
 #### Arrays
----
 > TODO - Add content
 
 #### Loops
----
 > TODO - Add content
 
 #### Control flow
----
 > TODO - Add content
 
 #### Functions
----
 > TODO - Add content
 
 #### Subroutines
----
 > TODO - Add content
 
 #### Modules
----
 > TODO - Add content
 
 #### File I/O
----
 > TODO - Add content
 
 #### Command line arguments
