@@ -6,6 +6,7 @@ This is work in progress. Feel free to contribute :)
 
 * [Hello World](#hello-world)
 * [Terminology](#terminology)
+* [Special Characters](#special-characters)
 * [Data types](#data-types)
 * [User Defined Types](#user-defined-types)
 * [Operators](#operators)
@@ -39,9 +40,24 @@ procedure, dummy procedure or statement function.
 statement or defined assignment statement. It can return more
 than one argument.
 
+#### Special Characters
+
+* **’** (Apostrophe) Editing, declaring a string
+* **"** (Quotation Marks) Declaring a string
+* **\*** (Asterisk) Comment lines.
+* **:** (Colon) Editing.
+* **::** (Double Colon) Separator.
+* **!** (Exclamation) inline comment.
+* **/** (Slash) Skip a line in a fmt statment?
+* **;** (Semicolon) Separates Statement on single source line. Except when it is in a character context.
+* **&** (Ampersand) Line continuation charachter.
 
 #### Data types
-> TODO - Add content
+* integer 
+* real 
+* character
+* logical
+* complex 
 
 #### User Defined Types
 > TODO - Add content
