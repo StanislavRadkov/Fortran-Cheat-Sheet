@@ -88,7 +88,7 @@ Access properties:
 * Arithmetic Operators:
 
 | Priority | Operation | Symbol | FORTRAN Expression | 
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | inside to outside | Parentheses | ( ) | A*(A+B) | 
 | right to left | Exponentiation | ** | A**B |
 | left to right | Multiplication | * | A*B |
