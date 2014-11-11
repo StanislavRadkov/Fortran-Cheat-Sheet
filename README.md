@@ -73,15 +73,15 @@ end type personType
 Declare an instance of person type:
 
 ``` fortran
-	type (personType) :: A
+type (personType) :: p
 ```
 
 Access properties:
 
 ``` fortran
-    A%name = 'John Doe'
-    A%age = 45
-    A%weight = 70
+p%name = 'John Doe'
+p%age = 45
+p%weight = 70
 ```
 
 #### Operators
