@@ -8,6 +8,7 @@ This is work in progress. Feel free to contribute :)
 * [Terminology](#terminology)
 * [Special Characters](#special-characters)
 * [Data types](#data-types)
+* [Type Declaration Statements](#type-declaration-statements)
 * [User Defined Types](#user-defined-types)
 * [Operators](#operators)
 * [Arrays](#arrays)
@@ -58,6 +59,27 @@ than one argument.
 * character
 * logical
 * complex 
+
+#### Type Declaration Statements
+
+> TODO - expand and add examples
+
+* non_overridable - Declares a bound procedure cannot be overridden in a subclass of this class.
+* allocatable - Declares an array is allocatable.
+* dimension - Declares the rank and and shape of an array.
+* external - Declares that a name is a function external to a pro-gram unit.
+* intent - Specifies the intended use of a dummy argument.
+* intrinsic - Declares that a name is a specific intrinsic function
+* nopass - Declares a bound procedure cannot be overridden in a subclass of this class.
+* optional - Declares that a dummey argument is optional.
+* parameter - Defines named constant.
+* pointer - Declares that a variable is a pointer.
+* private - Declares that an object is private to a module.
+* protected = Declares that an object in a module is protected, meaning that it can be used but not modified outside the module in which it is defined.
+* public - Declares that an object is private to a module.
+* save - Declares that an object is private to a module.
+* target - Declares that an object is private to a module.
+* volatile - Declares that a value of a variable might be changed at any time by some source external to the program.
 
 #### User Defined Types
 Definition of a new data type called 'personType':
