@@ -87,15 +87,15 @@ Access properties:
 #### Operators
 * Arithmetic Operators:
 
-Priority | Operation | Symbol | FORTRAN Expression 
---- | --- | ---
-inside to outside | Parentheses | ( ) | A*(A+B)
-right to left | Exponentiation | ** | A**B
-left to right | Multiplication | * | A*B
-left to right | Division | / | A/B
-left to right | Addition | + | A+B
-left to right | Subtraction | - | A-B
-left to right | Unary Minus | - | -A
+| Priority | Operation | Symbol | FORTRAN Expression | 
+| --- | --- | --- |
+| inside to outside | Parentheses | ( ) | A*(A+B) | 
+| right to left | Exponentiation | ** | A**B |
+| left to right | Multiplication | * | A*B |
+| left to right | Division | / | A/B |
+| left to right | Addition | + | A+B |
+| left to right | Subtraction | - | A-B |
+| left to right | Unary Minus | - | -A |
  
 #### Arrays
 > TODO - Add content
