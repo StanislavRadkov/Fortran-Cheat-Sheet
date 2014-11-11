@@ -60,11 +60,43 @@ than one argument.
 * complex 
 
 #### User Defined Types
-> TODO - Add content
+Definition of a new data type called 'personType':
+
+``` fortran
+type :: personType
+        character(len=100) :: name
+        integer :: age
+        real :: weight
+end type personType
+```
+
+Declare an instance of person type:
+
+``` fortran
+	type (personType) :: A
+```
+
+Access properties:
+
+``` fortran
+    A%name = 'John Doe'
+    A%age = 45
+    A%weight = 70
+```
 
 #### Operators
-> TODO - Add content
+* Arithmetic Operators:
 
+Priority | Operation | Symbol | FORTRAN Expression 
+--- | --- | ---
+inside to outside | Parentheses | ( ) | A*(A+B)
+right to left | Exponentiation | ** | A**B
+left to right | Multiplication | * | A*B
+left to right | Division | / | A/B
+left to right | Addition | + | A+B
+left to right | Subtraction | - | A-B
+left to right | Unary Minus | - | -A
+ 
 #### Arrays
 > TODO - Add content
 
