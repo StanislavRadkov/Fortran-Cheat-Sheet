@@ -21,13 +21,13 @@ This is work in progress. Feel free to contribute :)
 * [Command line arguments](#command-line-arguments)
 
 
-#### Hello World
+## Hello World
 ``` fortran
 program hello
     write(*,*) 'Hello World!'
 end
 ```
-#### Terminology
+## Terminology
 * **Statement** - An instruction which is either executabe or
 nonexecutable.
 * **Construct** - A sequence of statements ending with a
@@ -41,7 +41,7 @@ procedure, dummy procedure or statement function.
 statement or defined assignment statement. It can return more
 than one argument.
 
-#### Special Characters
+## Special Characters
 
 * **’** (Apostrophe) Editing, declaring a string
 * **"** (Quotation Marks) Declaring a string
@@ -53,14 +53,14 @@ than one argument.
 * **;** (Semicolon) Separates Statement on single source line. Except when it is in a character context.
 * **&** (Ampersand) Line continuation charachter.
 
-#### Data types
+## Data types
 * integer 
 * real 
 * character
 * logical
 * complex 
 
-#### Type Declaration Statements
+## Type Declaration Statements
 
 > TODO - expand and add examples
 
@@ -81,7 +81,7 @@ than one argument.
 * target - Declares that an object is private to a module.
 * volatile - Declares that a value of a variable might be changed at any time by some source external to the program.
 
-#### User Defined Types
+## User Defined Types
 Definition of a new data type called 'personType':
 
 ``` fortran
@@ -106,7 +106,7 @@ p%age = 45
 p%weight = 70
 ```
 
-#### Operators
+## Operators
 * Arithmetic Operators:
 
 | Priority | Operation | Symbol | FORTRAN Expression | 
@@ -119,26 +119,63 @@ p%weight = 70
 | left to right | Subtraction | - | A-B |
 | left to right | Unary Minus | - | -A |
  
-#### Arrays
+* Character Operators:
+
+	* Concatenation	- you can do it by using the '//' operator. 
+		```fortran
+		write(*,*) 'Concate'//'nation'
+		```
+	* Substring - string(startingIndex:endIndex)
+		```fortran
+		character(len=20) :: c = 'substring'
+		write(*,*) c(1:3)
+		```
+
+* Logical Operators (**in order of precedence**):
+
+| Operator |
+| :----: |
+| .not. |
+| .and. |
+| .or. | 
+
+* Relational Operators
+	* Comparing Numbers
+	| Operator | Meaning |
+	| :----: | :----: |
+	| .eq. | equal to |
+	| .ne. | not equal to |
+	| .lt. | less than |
+	| .le. | less than or equal |
+	| .gt. | greater than |
+	| .ge. | greater than or equal |
+
+	* Comparing Booleans
+	| Operator | Meaning |
+	| :----: | :----: |
+	| .eqv. | equivalent to |
+	| .neqv. | not equivalent to |
+
+## Arrays
 > TODO - Add content
 
-#### Loops
+## Loops
 > TODO - Add content
 
-#### Control flow
+## Control flow
 > TODO - Add content
 
-#### Functions
+## Functions
 > TODO - Add content
 
-#### Subroutines
+## Subroutines
 > TODO - Add content
 
-#### Modules
+## Modules
 > TODO - Add content
 
-#### File I/O
+## File I/O
 > TODO - Add content
 
-#### Command line arguments
+## Command line arguments
 > TODO - Add content
