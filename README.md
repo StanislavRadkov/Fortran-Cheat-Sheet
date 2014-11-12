@@ -141,20 +141,22 @@ p%weight = 70
 
 * Relational Operators
 	* Comparing Numbers
-	| Operator | Meaning |
-	| :----: | :----: |
-	| .eq. | equal to |
-	| .ne. | not equal to |
-	| .lt. | less than |
-	| .le. | less than or equal |
-	| .gt. | greater than |
-	| .ge. | greater than or equal |
+	
+| Operator | Meaning |
+| :----: | :----: |
+| .eq. | equal to |
+| .ne. | not equal to |
+| .lt. | less than |
+| .le. | less than or equal |
+| .gt. | greater than |
+| .ge. | greater than or equal |
 
 	* Comparing Booleans
-	| Operator | Meaning |
-	| :----: | :----: |
-	| .eqv. | equivalent to |
-	| .neqv. | not equivalent to |
+	
+| Operator | Meaning |
+| :----: | :----: |
+| .eqv. | equivalent to |
+| .neqv. | not equivalent to |
 
 ## Arrays
 > TODO - Add content
