@@ -140,7 +140,6 @@ p%weight = 70
 | .or. | 
 
 * Relational Operators
-	* Comparing Numbers
 	
 | Operator | Meaning |
 | :----: | :----: |
@@ -150,13 +149,8 @@ p%weight = 70
 | .le. | less than or equal |
 | .gt. | greater than |
 | .ge. | greater than or equal |
-
-	* Comparing Booleans
-	
-| Operator | Meaning |
-| :----: | :----: |
-| .eqv. | equivalent to |
-| .neqv. | not equivalent to |
+| .eqv. | equivalent to (for boolean) |
+| .neqv. | not equivalent to (for boolean) |
 
 ## Arrays
 > TODO - Add content
