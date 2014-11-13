@@ -167,20 +167,20 @@ the same as C which is stored in row major format.
 Define an array with starting index -3 and end index 3 using the dimension statement:
 
 ```fortran
-real, dimension(-3:3) :: arr
+integer, dimension(-3:3) :: arr
 data arr/1,2,3,4,5,6,7/
 ```
 
 Access element:
 
 ```fortran
-arr(-2)
+arr(-2) ! Output: 2
 ```
 
 Array subset:
 
 ```fortran
-arr(-2:2)
+arr(-2:2) ! Output: 2 3 4 5 6
 ```
 
 Define a multidimensional array:
