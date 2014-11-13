@@ -164,7 +164,7 @@ p%weight = 70
 Arrays can be up to seven dimensions. They are stored in column major format. This is not
 the same as C which is stored in row major format.
 
-Define an array with starting index -3 and end index 3 using the dimension 
+Define an array with starting index -3 and end index 3 using the dimension statement:
 
 ```fortran
 real, dimension(-3:3) :: arr
@@ -186,12 +186,12 @@ arr(-2:2)
 Define a multidimensional array:
 
 ```fortran
-real, dimension(1:3, 1:3) :: arr
+integer, dimension(1:3, 1:3) :: arr
 data arr/1,2,3,4,5,6,7,8,9/
 
-write(*,*) arr(1,1:3)
-write(*,*) arr(1:3,1)
-write(*,*) arr(1:3,1:3)
+write(*,*) arr(1,1:3) ! Output: 1 4 7   
+write(*,*) arr(1:3,1) ! Output: 1 2 3
+write(*,*) arr(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
 ```
 
 ## Loops
