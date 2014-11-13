@@ -11,6 +11,7 @@ This is work in progress. Feel free to contribute :)
 * [Type Declaration Statements](#type-declaration-statements)
 * [User Defined Types](#user-defined-types)
 * [Operators](#operators)
+* [Goto Statements](#goto-statements)
 * [Arrays](#arrays)
 * [Loops](#loops)
 * [Control flow](#control-flow)
@@ -62,9 +63,11 @@ than one argument.
 
 ## Type Declaration Statements
 
-> TODO - expand and add examples
-
+* dimension - Specifies the dimensions (start and end index) of an array.
+* common - Common storage area for variables that are in several program units.
+* data - Puts initial values into variables.
 * non_overridable - Declares a bound procedure cannot be overridden in a subclass of this class.
+* parameter - Makes a variable into a constant with a certain value.
 * allocatable - Declares an array is allocatable.
 * dimension - Declares the rank and and shape of an array.
 * external - Declares that a name is a function external to a pro-gram unit.
@@ -152,8 +155,44 @@ p%weight = 70
 | .eqv. | equivalent to (for boolean) |
 | .neqv. | not equivalent to (for boolean) |
 
-## Arrays
+## Goto Statements
+
 > TODO - Add content
+
+## Arrays
+
+Arrays can be up to seven dimensions. They are stored in column major format. This is not
+the same as C which is stored in row major format.
+
+Define an array with starting index -3 and end index 3 using the dimension 
+
+```fortran
+real, dimension(-3:3) :: arr
+data arr/1,2,3,4,5,6,7/
+```
+
+Access element:
+
+```fortran
+arr(-2)
+```
+
+Array subset:
+
+```fortran
+arr(-2:2)
+```
+
+Define a multidimensional array:
+
+```fortran
+real, dimension(1:3, 1:3) :: arr
+data arr/1,2,3,4,5,6,7,8,9/
+
+write(*,*) arr(1,1:3)
+write(*,*) arr(1:3,1)
+write(*,*) arr(1:3,1:3)
+```
 
 ## Loops
 > TODO - Add content
