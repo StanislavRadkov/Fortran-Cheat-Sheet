@@ -162,7 +162,7 @@ p%weight = 70
 ## Arrays
 
 Arrays can be up to seven dimensions. They are stored in column major format. This is not
-the same as C which is stored in row major format.
+the same as C which is stored in row major format. ([Row-major order](http://en.wikipedia.org/wiki/Row-major_order "Row-major order"))
 
 Define an array with starting index -3 and end index 3 using the dimension statement:
 
@@ -195,7 +195,40 @@ write(*,*) arr(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
 ```
 
 ## Loops
-> TODO - Add content
+
+A loop can be defined using the following syntax:
+
+```fortran
+do  variable = startValue, StopValue [, StepValue]       
+	one or more statments
+end do
+```
+StepValue is optional. Default value is 1.
+
+Example, where an iteration is skipped:
+```fortran
+do i = 1, 10, 2
+	if (i.eq.5) then
+    	cycle ! Skip iteration
+    endif
+
+	write(*,*) "i = ", i
+end do
+```
+Output:
+```fortran
+ i = 1
+ i = 3
+ i = 5
+ i = 7
+ i = 9
+```
+
+Implied DO loops are DO loops in the sense that they control the execution of some iterative procedure, but are different than DO loops because they do not use the do statement to control the execution. Basically, these loops are a shorthand that was introduced in FORTRAN to provide a method for array initialization and to cut back on the number of lines of code that where required in the program. Example:
+
+```fortran
+write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
+```
 
 ## Control flow
 > TODO - Add content
