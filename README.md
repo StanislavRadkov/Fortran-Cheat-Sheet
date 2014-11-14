@@ -219,7 +219,6 @@ Output:
 ```fortran
  i = 1
  i = 3
- i = 5
  i = 7
  i = 9
 ```
