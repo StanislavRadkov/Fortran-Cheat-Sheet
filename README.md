@@ -168,7 +168,13 @@ Define an array with starting index -3 and end index 3 using the dimension state
 
 ```fortran
 integer, dimension(-3:3) :: arr
-data arr/1,2,3,4,5,6,7/
+data arr/1,2,3,4,5,5,5/
+```
+
+You can use the following syntax for repeated values **count\*repeatedValue**:
+
+```fortran
+data arr/1,2,3,4,3*5/
 ```
 
 Access element:
@@ -180,7 +186,7 @@ arr(-2) ! Output: 2
 Array subset:
 
 ```fortran
-arr(-2:2) ! Output: 2 3 4 5 6
+arr(-2:2) ! Output: 2 3 4 5 5
 ```
 
 Define a multidimensional array:
