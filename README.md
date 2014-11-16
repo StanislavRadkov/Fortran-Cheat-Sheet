@@ -2,6 +2,9 @@ Fortran Cheat Sheet
 ===================
 This is work in progress. Feel free to contribute :)
 
+* [TODO](https://github.com/StanislavRadkov/Fortran-Cheat-Sheet/blob/master/TODO.md "TODO")
+* [How to contribute](https://github.com/StanislavRadkov/Fortran-Cheat-Sheet/blob/master/Contribute.md "How to contribute")
+
 ## Table of Contents
 
 * [Hello World](#hello-world)
