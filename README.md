@@ -184,8 +184,8 @@ Where 's' is label of an executable statement and 'e' is an expression of type i
 Example:
 
 ```fortran
-n = 2
-goto (10, 20, 30, 40), 3
+n = 3
+goto (10, 20, 30, 40), n
  
 10 write(*,*) 10
 20 write(*,*) 20
