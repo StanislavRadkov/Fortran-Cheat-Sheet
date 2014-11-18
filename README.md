@@ -160,16 +160,14 @@ p%weight = 70
 
 ## Goto Statements
 
-Goto statement performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to [spaghetti code](http://en.wikipedia.org/wiki/Spaghetti_code 'spaghetti code').
+Goto statements performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to [spaghetti code](http://en.wikipedia.org/wiki/Spaghetti_code 'spaghetti code').
 
 Simple example:
 
 ```fortran
 n = 2
 if(n.eq.2) then
-{
 	goto 100
-}
 endif
 
 write(*,*) 'This line will not be printed!'
@@ -179,7 +177,7 @@ write(*,*) 'This line will not be printed!'
 
 Goto statements can have multiple parameters. 
 ```fortran
-GO TO (s[, s])e
+goto (s[, s])e
 ```
 Where 's' is label of an executable statement and 'e' is an expression of type integer which points which label should be used by index. 
 
