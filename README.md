@@ -160,12 +160,51 @@ p%weight = 70
 
 ## Goto Statements
 
-> TODO - Add content
+Goto statement performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to [spaghetti code](http://en.wikipedia.org/wiki/Spaghetti_code 'spaghetti code').
+
+Simple example:
+
+```fortran
+n = 2
+if(n.eq.2) then
+{
+	goto 100
+}
+endif
+
+write(*,*) 'This line will not be printed!'
+
+100 write(*,*) 'Hi!'
+```
+
+Goto statements can have multiple parameters. 
+```fortran
+GO TO (s[, s])e
+```
+Where 's' is label of an executable statement and 'e' is an expression of type integer which points which label should be used by index. 
+
+Example:
+
+```fortran
+n = 2
+goto (10, 20, 30, 40), 3
+ 
+10 write(*,*) 10
+20 write(*,*) 20
+30 write(*,*) 30
+40 write(*,*) 40
+```
+
+Output:
+```fortran
+30
+40
+```
 
 ## Arrays
 
 Arrays can be up to seven dimensions. They are stored in column major format. This is not
-the same as C which is stored in row major format. ([Row-major order](http://en.wikipedia.org/wiki/Row-major_order "Row-major order"))
+the same as C which is stored in row major format. ([Row-major order](http://en.wikipedia.org/wiki/Row-major_order "Row-major order")). **By default the first index in an array is 1.**
 
 Define an array with starting index -3 and end index 3 using the dimension statement:
 
