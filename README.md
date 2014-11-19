@@ -14,8 +14,9 @@ This is work in progress. Feel free to contribute :)
 * [Type Declaration Statements](#type-declaration-statements)
 * [User Defined Types](#user-defined-types)
 * [Operators](#operators)
-* [Goto Statements](#goto-statements)
 * [Arrays](#arrays)
+* [Implicit variable declaration](#implicit-variable-declaration) 
+* [Goto Statements](#goto-statements)
 * [Loops](#loops)
 * [Control flow](#control-flow)
 * [Functions](#functions)
@@ -158,47 +159,6 @@ p%weight = 70
 | .eqv. | equivalent to (for boolean) |
 | .neqv. | not equivalent to (for boolean) |
 
-## Goto Statements
-
-Goto statements performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to [spaghetti code](http://en.wikipedia.org/wiki/Spaghetti_code 'spaghetti code').
-
-Simple example:
-
-```fortran
-n = 2
-if(n.eq.2) then
-	goto 100
-endif
-
-write(*,*) 'This line will not be printed!'
-
-100 write(*,*) 'Hi!'
-```
-
-Goto statements can have multiple parameters. 
-```fortran
-goto (s[, s])e
-```
-Where 's' is label of an executable statement and 'e' is an expression of type integer which points which label should be used by index. 
-
-Example:
-
-```fortran
-n = 3
-goto (10, 20, 30, 40), n
- 
-10 write(*,*) 10
-20 write(*,*) 20
-30 write(*,*) 30
-40 write(*,*) 40
-```
-
-Output:
-```fortran
-30
-40
-```
-
 ## Arrays
 
 Arrays can be up to seven dimensions. They are stored in column major format. This is not
@@ -238,6 +198,80 @@ data arr/1,2,3,4,5,6,7,8,9/
 write(*,*) arr(1,1:3) ! Output: 1 4 7   
 write(*,*) arr(1:3,1) ! Output: 1 2 3
 write(*,*) arr(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
+```
+
+## Implicit variable declaration
+
+Back in the 1950s, when Fortran was first developed, memory was very expensive, and because of this, a typical computer might have only a few KB of main memory. So, programmers wanted their Fortran programs to be as short as possible.
+Because of this they made variable declaration implicit. A consequence of this is [type inference](http://en.wikipedia.org/wiki/Type_inference "type inference"), this refers to the compiler's ability to deduce the type of the used variable if it has not been declared beforehand.
+
+**This means that when you mistype a character of a variable name the compiler will declare a new variable instead of an error!**
+
+For example:
+```fortran
+real :: variable = 0
+vaIRable = 3 + 5 ! wrong name
+write(*,*) variable ! output is 0
+```
+
+**You can force explicit variable declaration by either using the "implicit none" statement or by passing a specific parameter to the compiler.**
+
+If you put the "implicit none" statement at the top of this piece of code:
+
+```fortran
+implicit none
+real :: variable = 0
+vaIRable = 3 + 5 !! 
+write(*,*) variable
+```
+
+You will get a compile time error similar to this:
+
+```fortran
+    vaIRable = 3 + 5 ! wrong name
+            1
+Error: Symbol 'vairable' at (1) has no IMPLICIT type
+```
+
+## Goto Statements
+
+Goto statements performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to [spaghetti code](http://en.wikipedia.org/wiki/Spaghetti_code 'spaghetti code').
+
+Simple example:
+
+```fortran
+n = 2
+if(n.eq.2) then
+	goto 100
+endif
+
+write(*,*) 'This line will not be printed!'
+
+100 write(*,*) 'Hi!'
+```
+
+Goto statements can have multiple parameters. 
+```fortran
+goto (s[, s])e
+```
+Where 's' is label of an executable statement and 'e' is an expression of type integer which points which label should be used by index. 
+
+Example:
+
+```fortran
+n = 3
+goto (10, 20, 30, 40), n
+ 
+10 write(*,*) 10
+20 write(*,*) 20
+30 write(*,*) 30
+40 write(*,*) 40
+```
+
+Output:
+```fortran
+30
+40
 ```
 
 ## Loops
