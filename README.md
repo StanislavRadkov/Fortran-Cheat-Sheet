@@ -310,7 +310,7 @@ write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
 ```
 
 ## Control flow
-If/else statemetn:
+If/else statement:
 
 ```fortran
 if(n.eq.2) then
@@ -327,13 +327,13 @@ character(len=1) :: c
 c = 'C'
 
 select case (c)
-   case ("A")
+   case ('A')
       write(*,*) 'A'
-   case ("B")
+   case ('B')
       write(*,*) 'B'
-   case ("C")
+   case ('C')
       write(*,*) 'C'
-   case ("D")
+   case ('D')
       write(*,*) 'D'
    case default
       write(*,*) 'Other'
