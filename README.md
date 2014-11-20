@@ -310,7 +310,35 @@ write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
 ```
 
 ## Control flow
-> TODO - Add content
+If/else statemetn:
+
+```fortran
+if(n.eq.2) then
+	write(*,*) 'N is equal to 2'
+else
+	write(*,*) 'N is not equal to 2'
+endif
+```
+
+Switch case statement:
+
+```fortran
+character(len=1) :: c
+c = 'C'
+
+select case (c)
+   case ("A")
+      write(*,*) 'A'
+   case ("B")
+      write(*,*) 'B'
+   case ("C")
+      write(*,*) 'C'
+   case ("D")
+      write(*,*) 'D'
+   case default
+      write(*,*) 'Other'
+end select
+```
 
 ## Functions
 > TODO - Add content
