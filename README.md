@@ -148,16 +148,16 @@ p%weight = 70
 
 * Relational Operators
 	
-| Operator | Meaning |
-| :----: | :----: |
-| .eq. | equal to |
-| .ne. | not equal to |
-| .lt. | less than |
-| .le. | less than or equal |
-| .gt. | greater than |
-| .ge. | greater than or equal |
-| .eqv. | equivalent to (for boolean) |
-| .neqv. | not equivalent to (for boolean) |
+| Operator | Alternative| Meaning |
+| :----: | :----: | :----: |
+| .eq. | == | equal to |
+| .ne. | /= | not equal to |
+| .lt. | < | less than |
+| .le. | <= | less than or equal |
+| .gt. | > | greater than |
+| .ge. | >= | greater than or equal |
+| .eqv. | -- | equivalent to (for boolean) |
+| .neqv. | -- | not equivalent to (for boolean) |
 
 ## Arrays
 
