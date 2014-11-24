@@ -156,8 +156,8 @@ p%weight = 70
 | .le. | <= | less than or equal |
 | .gt. | > | greater than |
 | .ge. | >= | greater than or equal |
-| .eqv. | -- | equivalent to (for boolean) |
-| .neqv. | -- | not equivalent to (for boolean) |
+| .eqv. |  | equivalent to (for boolean) |
+| .neqv. |  | not equivalent to (for boolean) |
 
 ## Arrays
 
