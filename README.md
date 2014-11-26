@@ -341,7 +341,27 @@ end select
 ```
 
 ## Functions
-> TODO - Add content
+
+Defining and calling a functions:
+
+```fortran
+program functions
+  implicit none
+
+  real :: k = 4.5, z = 1.5
+
+  write (*,*) sumNumbers(k,z)
+  
+  contains
+      function sumNumbers(a, b)
+          real :: sumNumbers  ! The variable with the same name as the function is the returned value
+          real, intent(in) :: a,b ! a and b cannot be modified
+          
+          sumNumbers = a + b                
+      end function sumNumbers
+      
+end program functions
+```
 
 ## Subroutines
 > TODO - Add content
