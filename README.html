@@ -1,0 +1,1387 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #fff;
+}
+
+.markdown-body .highlight .h {
+  color: #333;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.markdown-body .highlight .mf,
+.markdown-body .highlight .mh,
+.markdown-body .highlight .mi,
+.markdown-body .highlight .mo,
+.markdown-body .highlight .il,
+.markdown-body .highlight .m {
+  color: #945277;
+}
+
+.markdown-body .highlight .s,
+.markdown-body .highlight .sb,
+.markdown-body .highlight .sc,
+.markdown-body .highlight .sd,
+.markdown-body .highlight .s2,
+.markdown-body .highlight .se,
+.markdown-body .highlight .sh,
+.markdown-body .highlight .si,
+.markdown-body .highlight .sx,
+.markdown-body .highlight .s1 {
+  color: #df5000;
+}
+
+.markdown-body .highlight .kc,
+.markdown-body .highlight .kd,
+.markdown-body .highlight .kn,
+.markdown-body .highlight .kp,
+.markdown-body .highlight .kr,
+.markdown-body .highlight .kt,
+.markdown-body .highlight .k,
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #458;
+}
+
+.markdown-body .highlight .c,
+.markdown-body .highlight .cm,
+.markdown-body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp,
+.markdown-body .highlight .cs,
+.markdown-body .highlight .cp .h {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cs {
+  font-style: italic;
+}
+
+.markdown-body .highlight .n {
+  color: #333;
+}
+
+.markdown-body .highlight .na,
+.markdown-body .highlight .nv,
+.markdown-body .highlight .vc,
+.markdown-body .highlight .vg,
+.markdown-body .highlight .vi {
+  color: #008080;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086B3;
+}
+
+.markdown-body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: #094e99;
+}
+
+.markdown-body .highlight .ni {
+  color: #800080;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555;
+}
+
+.markdown-body .highlight .nt {
+  color: #000080;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.markdown-body .highlight .go {
+  color: #888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbb;
+}
+
+.markdown-body .highlight .sr {
+  color: #017936;
+}
+
+.markdown-body .highlight .ss {
+  color: #8b467f;
+}
+
+.markdown-body .highlight .bp {
+  color: #999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #000;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+
+.markdown-body .highlight .pl-coc,
+.markdown-body .highlight .pl-entm,
+.markdown-body .highlight .pl-eoa,
+.markdown-body .highlight .pl-mai .pl-sf,
+.markdown-body .highlight .pl-pdv,
+.markdown-body .highlight .pl-sc,
+.markdown-body .highlight .pl-sr,
+.markdown-body .highlight .pl-v,
+.markdown-body .highlight .pl-vpf {
+  color: #0086b3;
+}
+
+.markdown-body .highlight .pl-eoac,
+.markdown-body .highlight .pl-mdht,
+.markdown-body .highlight .pl-mi1,
+.markdown-body .highlight .pl-mri,
+.markdown-body .highlight .pl-va,
+.markdown-body .highlight .pl-vpu {
+  color: #008080;
+}
+
+.markdown-body .highlight .pl-c,
+.markdown-body .highlight .pl-pdc {
+  color: #b4b7b4;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-k,
+.markdown-body .highlight .pl-ko,
+.markdown-body .highlight .pl-kolp,
+.markdown-body .highlight .pl-mc,
+.markdown-body .highlight .pl-mr,
+.markdown-body .highlight .pl-ms,
+.markdown-body .highlight .pl-s,
+.markdown-body .highlight .pl-sok,
+.markdown-body .highlight .pl-st {
+  color: #6e5494;
+}
+
+.markdown-body .highlight .pl-ef,
+.markdown-body .highlight .pl-enf,
+.markdown-body .highlight .pl-enm,
+.markdown-body .highlight .pl-entc,
+.markdown-body .highlight .pl-eoi,
+.markdown-body .highlight .pl-sf,
+.markdown-body .highlight .pl-smc {
+  color: #d12089;
+}
+
+.markdown-body .highlight .pl-ens,
+.markdown-body .highlight .pl-eoai,
+.markdown-body .highlight .pl-kos,
+.markdown-body .highlight .pl-mh .pl-pdh,
+.markdown-body .highlight .pl-mp,
+.markdown-body .highlight .pl-pde,
+.markdown-body .highlight .pl-stp {
+  color: #458;
+}
+
+.markdown-body .highlight .pl-enti {
+  color: #d12089;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cce,
+.markdown-body .highlight .pl-enc,
+.markdown-body .highlight .pl-kou,
+.markdown-body .highlight .pl-mq {
+  color: #f93;
+}
+
+.markdown-body .highlight .pl-mp1 .pl-sf {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cos,
+.markdown-body .highlight .pl-ent,
+.markdown-body .highlight .pl-md,
+.markdown-body .highlight .pl-mdhf,
+.markdown-body .highlight .pl-ml,
+.markdown-body .highlight .pl-pdc1,
+.markdown-body .highlight .pl-pds,
+.markdown-body .highlight .pl-s1,
+.markdown-body .highlight .pl-scp,
+.markdown-body .highlight .pl-sol {
+  color: #df5000;
+}
+
+.markdown-body .highlight .pl-c1,
+.markdown-body .highlight .pl-cn,
+.markdown-body .highlight .pl-pse,
+.markdown-body .highlight .pl-pse .pl-s2,
+.markdown-body .highlight .pl-vi {
+  color: #a31515;
+}
+
+.markdown-body .highlight .pl-mb,
+.markdown-body .highlight .pl-pdb {
+  color: #df5000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mi,
+.markdown-body .highlight .pl-pdi {
+  color: #6e5494;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-ms1 {
+  background-color: #f5f5f5;
+}
+
+.markdown-body .highlight .pl-mdh,
+.markdown-body .highlight .pl-mdi {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mdr {
+  color: #0086b3;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-s2 {
+  color: #333;
+}
+
+.markdown-body .highlight .pl-ii {
+  background-color: #df5000;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-ib {
+  background-color: #f93;
+}
+
+.markdown-body .highlight .pl-id {
+  background-color: #a31515;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-iu {
+  background-color: #b4b7b4;
+}
+
+.markdown-body .highlight .pl-mo {
+  color: #969896;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}</style><title>README</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-fortran-cheat-sheet" class="anchor" href="#fortran-cheat-sheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fortran Cheat Sheet</h1>
+
+<p>This is work in progress. Feel free to contribute :)</p>
+
+<ul>
+<li><a href="https://github.com/StanislavRadkov/Fortran-Cheat-Sheet/blob/master/TODO.md" title="TODO">TODO</a></li>
+<li><a href="https://github.com/StanislavRadkov/Fortran-Cheat-Sheet/blob/master/Contribute.md" title="How to contribute">How to contribute</a></li>
+</ul>
+
+<h2>
+<a id="user-content-table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+
+<ul>
+<li><a href="#hello-world">Hello World</a></li>
+<li><a href="#terminology">Terminology</a></li>
+<li><a href="#special-characters">Special Characters</a></li>
+<li><a href="#data-types">Data types</a></li>
+<li><a href="#type-declaration-statements">Type Declaration Statements</a></li>
+<li><a href="#user-defined-types">User Defined Types</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#arrays">Arrays</a></li>
+<li>
+<a href="#implicit-variable-declaration">Implicit variable declaration</a> </li>
+<li><a href="#goto-statements">Goto Statements</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#control-flow">Control flow</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#subroutines">Subroutines</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#file-io">File I/O</a></li>
+<li><a href="#command-line-arguments">Command line arguments</a></li>
+</ul>
+
+<h2>
+<a id="user-content-hello-world" class="anchor" href="#hello-world" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hello World</h2>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">program</span> hello
+    <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>Hello World!<span class="pl-pds">'</span></span>
+end
+
+&gt; Please keep <span class="pl-s">in</span> mind the language is not <span class="pl-k">case</span> sensitive outside of <span class="pl-st">character</span> literals.</pre></div>
+
+<h2>
+<a id="user-content-terminology" class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology</h2>
+
+<ul>
+<li>
+<strong>Statement</strong> - An instruction which is either executabe or
+nonexecutable.</li>
+<li>
+<strong>Construct</strong> - A sequence of statements ending with a
+construct terminal statement.</li>
+<li>
+<strong>Function</strong> - A procedure that returns the value of a single
+variable.</li>
+<li>
+<strong>Procedure</strong> - Either a function or subroutine. Intrinsic
+procedure, external procedure, module procedure, internal
+procedure, dummy procedure or statement function.</li>
+<li>
+<strong>Subroutine</strong> - A procedure that is invoked by a CALL
+statement or defined assignment statement. It can return more
+than one argument.</li>
+</ul>
+
+<h2>
+<a id="user-content-special-characters" class="anchor" href="#special-characters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special Characters</h2>
+
+<ul>
+<li>
+<strong>’</strong> (Apostrophe) Editing, declaring a string</li>
+<li>
+<strong>"</strong> (Quotation Marks) Declaring a string</li>
+<li>
+<strong>*</strong> (Asterisk) Comment lines.</li>
+<li>
+<strong>:</strong> (Colon) Editing.</li>
+<li>
+<strong>::</strong> (Double Colon) Separator.</li>
+<li>
+<strong>!</strong> (Exclamation) inline comment.</li>
+<li>
+<strong>/</strong> (Slash) Skip a line in a fmt statment?</li>
+<li>
+<strong>;</strong> (Semicolon) Separates Statement on single source line. Except when it is in a character context.</li>
+<li>
+<strong>&amp;</strong> (Ampersand) Line continuation charachter.</li>
+</ul>
+
+<h2>
+<a id="user-content-data-types" class="anchor" href="#data-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data types</h2>
+
+<ul>
+<li>integer </li>
+<li>real </li>
+<li>character</li>
+<li>logical</li>
+<li>complex </li>
+</ul>
+
+<h2>
+<a id="user-content-type-declaration-statements" class="anchor" href="#type-declaration-statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Type Declaration Statements</h2>
+
+<ul>
+<li>dimension - Specifies the dimensions (start and end index) of an array.</li>
+<li>common - Common storage area for variables that are in several program units.</li>
+<li>data - Puts initial values into variables.</li>
+<li>non_overridable - Declares a bound procedure cannot be overridden in a subclass of this class.</li>
+<li>parameter - Makes a variable into a constant with a certain value.</li>
+<li>allocatable - Declares an array is allocatable.</li>
+<li>dimension - Declares the rank and and shape of an array.</li>
+<li>external - Declares that a name is a function external to a pro-gram unit.</li>
+<li>intent - Specifies the intended use of a dummy argument.</li>
+<li>intrinsic - Declares that a name is a specific intrinsic function</li>
+<li>nopass - Declares a bound procedure cannot be overridden in a subclass of this class.</li>
+<li>optional - Declares that a dummey argument is optional.</li>
+<li>parameter - Defines named constant.</li>
+<li>pointer - Declares that a variable is a pointer.</li>
+<li>private - Declares that an object is private to a module.</li>
+<li>protected = Declares that an object in a module is protected, meaning that it can be used but not modified outside the module in which it is defined.</li>
+<li>public - Declares that an object is private to a module.</li>
+<li>save - Declares that an object is private to a module.</li>
+<li>target - Declares that an object is private to a module.</li>
+<li>volatile - Declares that a value of a variable might be changed at any time by some source external to the program.</li>
+</ul>
+
+<h2>
+<a id="user-content-user-defined-types" class="anchor" href="#user-defined-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Defined Types</h2>
+
+<p>Definition of a new data type called 'personType':</p>
+
+<div class="highlight highlight-fortran"><pre>type <span class="pl-k">::</span> personType
+        <span class="pl-st">character</span>(len<span class="pl-k">=</span><span class="pl-c1">100</span>) <span class="pl-k">::</span> name
+        <span class="pl-st">integer</span> <span class="pl-k">::</span> age
+        <span class="pl-st">real</span> <span class="pl-k">::</span> weight
+end type personType</pre></div>
+
+<p>Declare an instance of person type:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">type</span> (personType) <span class="pl-k">::</span> p</pre></div>
+
+<p>Access properties:</p>
+
+<div class="highlight highlight-fortran"><pre>p<span class="pl-k">%</span>name <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>John Doe<span class="pl-pds">'</span></span>
+p<span class="pl-k">%</span>age <span class="pl-k">=</span> <span class="pl-c1">45</span>
+p<span class="pl-k">%</span>weight <span class="pl-k">=</span> <span class="pl-c1">70</span></pre></div>
+
+<h2>
+<a id="user-content-operators" class="anchor" href="#operators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Operators</h2>
+
+<ul>
+<li>Arithmetic Operators:</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Priority</th>
+<th align="center">Operation</th>
+<th align="center">Symbol</th>
+<th align="center">FORTRAN Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">inside to outside</td>
+<td align="center">Parentheses</td>
+<td align="center">( )</td>
+<td align="center">A*(A+B)</td>
+</tr>
+<tr>
+<td align="center">right to left</td>
+<td align="center">Exponentiation</td>
+<td align="center">**</td>
+<td align="center">A**B</td>
+</tr>
+<tr>
+<td align="center">left to right</td>
+<td align="center">Multiplication</td>
+<td align="center">*</td>
+<td align="center">A*B</td>
+</tr>
+<tr>
+<td align="center">left to right</td>
+<td align="center">Division</td>
+<td align="center">/</td>
+<td align="center">A/B</td>
+</tr>
+<tr>
+<td align="center">left to right</td>
+<td align="center">Addition</td>
+<td align="center">+</td>
+<td align="center">A+B</td>
+</tr>
+<tr>
+<td align="center">left to right</td>
+<td align="center">Subtraction</td>
+<td align="center">-</td>
+<td align="center">A-B</td>
+</tr>
+<tr>
+<td align="center">left to right</td>
+<td align="center">Unary Minus</td>
+<td align="center">-</td>
+<td align="center">-A</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+<p>Character Operators:</p>
+
+<ul>
+<li>Concatenation - you can do it by using the '//' operator. 
+<code>fortran
+write(*,*) 'Concate'//'nation'
+</code>
+</li>
+<li>Substring - string(startingIndex:endIndex)
+<code>fortran
+character(len=20) :: c = 'substring'
+write(*,*) c(1:3)
+</code>
+</li>
+</ul>
+</li>
+<li><p>Logical Operators (<strong>in order of precedence</strong>):</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.not.</td>
+</tr>
+<tr>
+<td align="center">.and.</td>
+</tr>
+<tr>
+<td align="center">.or.</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Relational Operators</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+<th align="center">Alternative</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.eq.</td>
+<td align="center">==</td>
+<td align="center">equal to</td>
+</tr>
+<tr>
+<td align="center">.ne.</td>
+<td align="center">/=</td>
+<td align="center">not equal to</td>
+</tr>
+<tr>
+<td align="center">.lt.</td>
+<td align="center">&lt;</td>
+<td align="center">less than</td>
+</tr>
+<tr>
+<td align="center">.le.</td>
+<td align="center">&lt;=</td>
+<td align="center">less than or equal</td>
+</tr>
+<tr>
+<td align="center">.gt.</td>
+<td align="center">&gt;</td>
+<td align="center">greater than</td>
+</tr>
+<tr>
+<td align="center">.ge.</td>
+<td align="center">&gt;=</td>
+<td align="center">greater than or equal</td>
+</tr>
+<tr>
+<td align="center">.eqv.</td>
+<td align="center"></td>
+<td align="center">equivalent to (for boolean)</td>
+</tr>
+<tr>
+<td align="center">.neqv.</td>
+<td align="center"></td>
+<td align="center">not equivalent to (for boolean)</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="user-content-arrays" class="anchor" href="#arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arrays</h2>
+
+<p>Arrays can be up to seven dimensions. They are stored in column major format. This is not
+the same as C which is stored in row major format. (<a href="http://en.wikipedia.org/wiki/Row-major_order" title="Row-major order">Row-major order</a>). <strong>By default the first index in an array is 1.</strong></p>
+
+<p>Define an array with starting index -3 and end index 3 using the dimension statement:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">integer</span>, <span class="pl-s">dimension</span>(<span class="pl-k">-</span><span class="pl-c1">3</span>:<span class="pl-c1">3</span>) <span class="pl-k">::</span> arr
+<span class="pl-s">data</span> arr<span class="pl-k">/</span><span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">5</span>,<span class="pl-c1">5</span><span class="pl-k">/</span></pre></div>
+
+<p>You can use the following syntax for repeated values <strong>count*repeatedValue</strong>:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-s">data</span> arr<span class="pl-k">/</span><span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">3</span><span class="pl-k">*</span><span class="pl-c1">5</span><span class="pl-k">/</span></pre></div>
+
+<p>Access element:</p>
+
+<div class="highlight highlight-fortran"><pre>arr(<span class="pl-k">-</span><span class="pl-c1">2</span>) <span class="pl-c">! Output: 2</span></pre></div>
+
+<p>Array subset:</p>
+
+<div class="highlight highlight-fortran"><pre>arr(<span class="pl-k">-</span><span class="pl-c1">2</span>:<span class="pl-c1">2</span>) <span class="pl-c">! Output: 2 3 4 5 5</span></pre></div>
+
+<p>Define a multidimensional array:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">integer</span>, <span class="pl-s">dimension</span>(<span class="pl-c1">1</span>:<span class="pl-c1">3</span>, <span class="pl-c1">1</span>:<span class="pl-c1">3</span>) <span class="pl-k">::</span> arr
+<span class="pl-s">data</span> arr<span class="pl-k">/</span><span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>,<span class="pl-c1">7</span>,<span class="pl-c1">8</span>,<span class="pl-c1">9</span><span class="pl-k">/</span>
+
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) arr(<span class="pl-c1">1</span>,<span class="pl-c1">1</span>:<span class="pl-c1">3</span>) <span class="pl-c">! Output: 1 4 7   </span>
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) arr(<span class="pl-c1">1</span>:<span class="pl-c1">3</span>,<span class="pl-c1">1</span>) <span class="pl-c">! Output: 1 2 3</span>
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) arr(<span class="pl-c1">1</span>:<span class="pl-c1">3</span>,<span class="pl-c1">1</span>:<span class="pl-c1">3</span>) <span class="pl-c">! Output:  1 2 3 4 5 6 7 8 9</span></pre></div>
+
+<h2>
+<a id="user-content-implicit-variable-declaration" class="anchor" href="#implicit-variable-declaration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implicit variable declaration</h2>
+
+<p>Back in the 1950s, when Fortran was first developed, memory was very expensive, and because of this, a typical computer might have only a few KB of main memory. So, programmers wanted their Fortran programs to be as short as possible.
+Because of this they made variable declaration implicit. A consequence of this is <a href="http://en.wikipedia.org/wiki/Type_inference" title="type inference">type inference</a>, this refers to the compiler's ability to deduce the type of the used variable if it has not been declared beforehand.</p>
+
+<p><strong>This means that when you mistype a character of a variable name the compiler will declare a new variable instead of an error!</strong></p>
+
+<p>For example:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">real</span> <span class="pl-k">::</span> variable <span class="pl-k">=</span> <span class="pl-c1">0</span>
+vaIRable <span class="pl-k">=</span> <span class="pl-c1">3</span> <span class="pl-k">+</span> <span class="pl-c1">5</span> <span class="pl-c">! wrong name</span>
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) variable <span class="pl-c">! output is 0</span></pre></div>
+
+<p><strong>You can force explicit variable declaration by either using the "implicit none" statement or by passing a specific parameter to the compiler.</strong></p>
+
+<p>If you put the "implicit none" statement at the top of this piece of code:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-s">implicit none</span>
+<span class="pl-st">real</span> <span class="pl-k">::</span> variable <span class="pl-k">=</span> <span class="pl-c1">0</span>
+vaIRable <span class="pl-k">=</span> <span class="pl-c1">3</span> <span class="pl-k">+</span> <span class="pl-c1">5</span> <span class="pl-c">!! </span>
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) variable</pre></div>
+
+<p>You will get a compile time error similar to this:</p>
+
+<div class="highlight highlight-fortran"><pre>    vaIRable <span class="pl-k">=</span> <span class="pl-c1">3</span> <span class="pl-k">+</span> <span class="pl-c1">5</span> <span class="pl-c">! wrong name</span>
+            <span class="pl-c1">1</span>
+Error: Symbol <span class="pl-s1"><span class="pl-pds">'</span>vairable<span class="pl-pds">'</span></span> at (<span class="pl-c1">1</span>) has no <span class="pl-s">IMPLICIT</span> type</pre></div>
+
+<h2>
+<a id="user-content-goto-statements" class="anchor" href="#goto-statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Goto Statements</h2>
+
+<p>Goto statements performs a one-way transfer of control to another line of code. A function call normally returns control. Goto statements should be avoided as they can lead to <a href="http://en.wikipedia.org/wiki/Spaghetti_code" title="spaghetti code">spaghetti code</a>.</p>
+
+<p>Simple example:</p>
+
+<div class="highlight highlight-fortran"><pre>n <span class="pl-k">=</span> <span class="pl-c1">2</span>
+<span class="pl-k">if</span>(n<span class="pl-k">.eq.</span><span class="pl-c1">2</span>) <span class="pl-k">then</span>
+    <span class="pl-k">goto</span> <span class="pl-c1">100</span>
+<span class="pl-k">endif</span>
+
+<span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>This line will not be printed!<span class="pl-pds">'</span></span>
+
+<span class="pl-c1">100</span> <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>Hi!<span class="pl-pds">'</span></span></pre></div>
+
+<p>Goto statements can have multiple parameters. </p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">goto</span> (s[, s])e</pre></div>
+
+<p>Where 's' is label of an executable statement and 'e' is an expression of type integer which points which label should be used by index. </p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-fortran"><pre>n <span class="pl-k">=</span> <span class="pl-c1">3</span>
+<span class="pl-k">goto</span> (<span class="pl-c1">10</span>, <span class="pl-c1">20</span>, <span class="pl-c1">30</span>, <span class="pl-c1">40</span>), n
+
+<span class="pl-c1">10</span> <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-c1">10</span>
+<span class="pl-c1">20</span> <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-c1">20</span>
+<span class="pl-c1">30</span> <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-c1">30</span>
+<span class="pl-c1">40</span> <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-c1">40</span></pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-c1">30</span>
+<span class="pl-c1">40</span></pre></div>
+
+<h2>
+<a id="user-content-loops" class="anchor" href="#loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h2>
+
+<p>A loop can be defined using the following syntax:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">do</span>  variable <span class="pl-k">=</span> startValue, StopValue [, StepValue]       
+    one or more statments
+<span class="pl-k">end do</span></pre></div>
+
+<p>StepValue is optional. Default value is 1.</p>
+
+<p>Example, where an iteration is skipped:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">do</span> i <span class="pl-k">=</span> <span class="pl-c1">1</span>, <span class="pl-c1">10</span>, <span class="pl-c1">2</span>
+    <span class="pl-k">if</span> (i<span class="pl-k">.eq.</span><span class="pl-c1">5</span>) <span class="pl-k">then</span>
+        <span class="pl-k">cycle</span> <span class="pl-c">! Skip iteration</span>
+    <span class="pl-k">endif</span>
+
+    <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">"</span>i = <span class="pl-pds">"</span></span>, i
+<span class="pl-k">end do</span></pre></div>
+
+<p>Output:</p>
+
+<div class="highlight highlight-fortran"><pre> i <span class="pl-k">=</span> <span class="pl-c1">1</span>
+ i <span class="pl-k">=</span> <span class="pl-c1">3</span>
+ i <span class="pl-k">=</span> <span class="pl-c1">7</span>
+ i <span class="pl-k">=</span> <span class="pl-c1">9</span></pre></div>
+
+<p>Implied DO loops are DO loops in the sense that they control the execution of some iterative procedure, but are different than DO loops because they do not use the do statement to control the execution. Basically, these loops are a shorthand that was introduced in FORTRAN to provide a method for array initialization and to cut back on the number of lines of code that where required in the program. Example:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">write</span> (<span class="pl-k">*</span>,<span class="pl-k">*</span>) (i, i<span class="pl-k">=</span><span class="pl-c1">1</span>, <span class="pl-c1">5</span>) <span class="pl-c">! Output:  1 2 3 4 5</span></pre></div>
+
+<h2>
+<a id="user-content-control-flow" class="anchor" href="#control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control flow</h2>
+
+<p>If/else statement:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">if</span>(n<span class="pl-k">.eq.</span><span class="pl-c1">2</span>) <span class="pl-k">then</span>
+    <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>N is equal to 2<span class="pl-pds">'</span></span>
+<span class="pl-k">else</span>
+    <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>N is not equal to 2<span class="pl-pds">'</span></span>
+<span class="pl-k">endif</span></pre></div>
+
+<p>Switch case statement:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">character</span>(len<span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">::</span> c
+<span class="pl-c">c = 'C'</span>
+
+<span class="pl-k">select case</span> (c)
+   <span class="pl-k">case</span> (<span class="pl-s1"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>)
+      <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>
+   <span class="pl-k">case</span> (<span class="pl-s1"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>)
+      <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>
+   <span class="pl-k">case</span> (<span class="pl-s1"><span class="pl-pds">'</span>C<span class="pl-pds">'</span></span>)
+      <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>C<span class="pl-pds">'</span></span>
+   <span class="pl-k">case</span> (<span class="pl-s1"><span class="pl-pds">'</span>D<span class="pl-pds">'</span></span>)
+      <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>D<span class="pl-pds">'</span></span>
+   <span class="pl-k">case default</span>
+      <span class="pl-k">write</span>(<span class="pl-k">*</span>,<span class="pl-k">*</span>) <span class="pl-s1"><span class="pl-pds">'</span>Other<span class="pl-pds">'</span></span>
+<span class="pl-k">end select</span></pre></div>
+
+<h2>
+<a id="user-content-functions" class="anchor" href="#functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h2>
+
+<p>Defining and calling a functions:</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-k">program</span> functions
+  <span class="pl-s">implicit none</span>
+
+  <span class="pl-st">real</span> <span class="pl-k">::</span> k <span class="pl-k">=</span> <span class="pl-c1">4.5</span>, z <span class="pl-k">=</span> <span class="pl-c1">1.5</span>
+
+  <span class="pl-k">write</span> (<span class="pl-k">*</span>,<span class="pl-k">*</span>) sumNumbers(k,z)
+
+  <span class="pl-k">contains</span>
+      <span class="pl-st">function</span> <span class="pl-en">sumNumbers</span>(<span class="pl-v">a</span>, <span class="pl-v">b</span>)
+          <span class="pl-st">real</span> <span class="pl-k">::</span> sumNumbers  <span class="pl-c">! The variable with the same name as the function is the returned value</span>
+          <span class="pl-st">real</span>, <span class="pl-s">intent</span>(<span class="pl-s">in</span>) <span class="pl-k">::</span> a,b <span class="pl-c">! a and b cannot be modified</span>
+
+          sumNumbers <span class="pl-k">=</span> a <span class="pl-k">+</span> b                
+      <span class="pl-k">end</span> <span class="pl-st">function</span><span class="pl-en"> sumNumbers</span>
+
+<span class="pl-k">end program</span> functions</pre></div>
+
+<h2>
+<a id="user-content-subroutines" class="anchor" href="#subroutines" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subroutines</h2>
+
+<p>Subroutines in Fortran do not return a value. Instead they can modify some of their arguments. They must be invoked with the 'call' keyword. The 'intent' statement defines the type of the argument. Input arguments cannot be changed inside the subroutine.</p>
+
+<div class="highlight highlight-fortran"><pre><span class="pl-st">real</span> <span class="pl-k">::</span> k
+<span class="pl-k">call</span> sumNumbers(k, <span class="pl-c1">1.0</span>, <span class="pl-c1">3.0</span>)
+<span class="pl-k">write</span> (<span class="pl-k">*</span>,<span class="pl-k">*</span>) k <span class="pl-c">! Output is 4.0</span>
+
+<span class="pl-k">contains</span>
+    <span class="pl-st">subroutine</span> <span class="pl-en">sumNumbers</span>(<span class="pl-v">k</span>, <span class="pl-v">z</span>, <span class="pl-v">y</span>)
+        <span class="pl-st">real</span>, <span class="pl-s">intent</span>(<span class="pl-s">out</span>) <span class="pl-k">::</span> k <span class="pl-c">! Output variable</span>
+        <span class="pl-st">real</span>, <span class="pl-s">intent</span>(<span class="pl-s">in</span>) <span class="pl-k">::</span> z,y <span class="pl-c">! Input variable</span>
+
+        k <span class="pl-k">=</span> z <span class="pl-k">+</span> y
+<span class="pl-k">end</span> <span class="pl-st">subroutine</span><span class="pl-en"> sumNumbers</span></pre></div>
+
+<h2>
+<a id="user-content-modules" class="anchor" href="#modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h2>
+
+<blockquote>
+<p>TODO - Add content</p>
+</blockquote>
+
+<h2>
+<a id="user-content-file-io" class="anchor" href="#file-io" aria-hidden="true"><span class="octicon octicon-link"></span></a>File I/O</h2>
+
+<blockquote>
+<p>TODO - Add content</p>
+</blockquote>
+
+<h2>
+<a id="user-content-command-line-arguments" class="anchor" href="#command-line-arguments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command line arguments</h2>
+
+<blockquote>
+<p>TODO - Add content</p>
+</blockquote>
+</article></body></html>
