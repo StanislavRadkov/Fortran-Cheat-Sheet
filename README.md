@@ -364,7 +364,22 @@ end program functions
 ```
 
 ## Subroutines
-> TODO - Add content
+Subroutines in Fortran do not return a value. Instead they can modify some of their arguments. They must be invoked with the 'call' keyword. The 'intent' statement defines the type of the argument. Input arguments cannot be changed inside the subroutine.
+
+
+```fortran
+real :: k
+call sumNumbers(k, 1.0, 3.0)
+write (*,*) k ! Output is 4.0
+
+contains
+    subroutine sumNumbers(k, z, y)
+        real, intent(out) :: k ! Output variable
+        real, intent(in) :: z,y ! Input variable
+        
+        k = z + y
+end subroutine sumNumbers
+```
 
 ## Modules
 > TODO - Add content
