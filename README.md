@@ -31,9 +31,10 @@ This is work in progress. Feel free to contribute :)
 program hello
     write(*,*) 'Hello World!'
 end
-
-> Please keep in mind the language is not case sensitive outside of character literals.
 ```
+
+> Please keep in mind that the language is not case sensitive outside of character literals.
+
 ## Terminology
 * **Statement** - An instruction which is either executabe or
 nonexecutable.
