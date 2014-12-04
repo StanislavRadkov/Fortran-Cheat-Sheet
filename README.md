@@ -347,7 +347,7 @@ end select
 
 ## Functions
 
-Defining and calling a functions:
+Defining and calling a function:
 
 ```fortran
 program functions
@@ -383,7 +383,7 @@ contains
         real, intent(in) :: z,y ! Input variable
         
         k = z + y
-end subroutine sumNumbers
+    end subroutine sumNumbers
 ```
 
 ## Modules
