@@ -213,7 +213,7 @@ If we want to add two arrays a and b and put the result in c. We may have someth
 ```fortran
 do i=1,n
   do j=1,n
-    a(j,i) = b(j,i) + c(j,i)
+    c(j,i) = a(j,i) + b(j,i)
   enddo
 enddo
 ```
@@ -222,14 +222,14 @@ However in Fortran we can also do the following:
 c = a + b
 ```
 
-Most of the intrinsic functions operate component-wise on arrays. C = sin(A) is equivalent to:
+Most of the intrinsic functions operate component-wise on arrays. m = sin(k) is equivalent to:
 
 ```fortran
 do i=1,n
   m(i) = sin(k(i))
 enddo
 ```
-> Note: C = A*B multplies corresponding elements in A and B. It does NOT do matrix multiplication. There are some intrinic functions for matrix multiplication (matmul) and dot >products (dot_product). 
+> Note: c = a*b multplies corresponding elements in A and B. It does NOT do matrix multiplication. There are some intrinic functions for matrix multiplication (matmul) and dot products (dot_product). 
 
 Another example operations on a vector and a scalar:
 
