@@ -15,6 +15,7 @@ This is work in progress. Feel free to contribute :)
 * [User Defined Types](#user-defined-types)
 * [Operators](#operators)
 * [Arrays](#arrays)
+* [Array Operations](#array-operations)
 * [Implicit variable declaration](#implicit-variable-declaration) 
 * [Goto Statements](#goto-statements)
 * [Loops](#loops)
@@ -205,6 +206,42 @@ write(*,*) arr(1:3,1) ! Output: 1 2 3
 write(*,*) arr(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
 ```
 
+## Array Operations
+
+If we want to add two arrays a and b and put the result in c. We may have something like the following piece of code:
+
+```fortran
+do i=1,n
+  do j=1,n
+    a(j,i) = b(j,i) + c(j,i)
+  enddo
+enddo
+```
+However in Fortran we can also do the following:
+```fortran
+c = a + b
+```
+
+Most of the intrinsic functions operate component-wise on arrays. C = sin(A) is equivalent to:
+
+```fortran
+do i=1,n
+  m(i) = sin(k(i))
+enddo
+```
+> Note: C = A*B multplies corresponding elements in A and B. It does NOT do matrix multiplication. There are some intrinic functions for matrix multiplication (matmul) and dot >products (dot_product). 
+
+Another example operations on a vector and a scalar:
+
+```fortran
+real, dimension(3) :: m
+data m/1.0, 2.0, 3.0/
+
+write(*,*) m + 1   ! Output: 2.0 3.0 4.0    
+write(*,*) m * 2   ! Output: 2.0 4.0 6.0    
+write(*,*) m/2     ! Output: 0.5 1.0 1.50000000    
+write(*,*) sqrt(m) ! Output: 1.00 1.41 1.73
+```
 ## Implicit variable declaration
 
 Back in the 1950s, when Fortran was first developed, memory was very expensive, and because of this, a typical computer might have only a few KB of main memory. So, programmers wanted their Fortran programs to be as short as possible.
