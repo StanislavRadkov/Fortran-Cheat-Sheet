@@ -275,7 +275,7 @@ You will get a compile time error similar to this:
 Error: Symbol 'vairable' at (1) has no IMPLICIT type
 ```
 
->According to the Fortran95 language standard unless specified otherwise, all variables starting with letters I, J, K, L, M and N are of type integer. All other are by default of type real. Other data types must be explicitly declared. Those defaults can be overridden by 'implicit TypeName (CharacterRange)' statements. However it is considered a good practice to always use the 'implicit none' statement and explicitly declare all variables! 
+>According to the Fortran language standard unless specified otherwise, all variables starting with letters I, J, K, L, M and N are of type integer. All other are by default of type real. Other data types must be explicitly declared. Those defaults can be overridden by 'implicit TypeName (CharacterRange)' statements. However it is considered a good practice to always use the 'implicit none' statement and explicitly declare all variables! 
 
 ## Goto Statements
 
