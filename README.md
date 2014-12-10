@@ -239,7 +239,7 @@ data m/1.0, 2.0, 3.0/
 
 write(*,*) m + 1   ! Output: 2.0 3.0 4.0    
 write(*,*) m * 2   ! Output: 2.0 4.0 6.0    
-write(*,*) m/2     ! Output: 0.5 1.0 1.50000000    
+write(*,*) m/2     ! Output: 0.5 1.0 1.5   
 write(*,*) sqrt(m) ! Output: 1.00 1.41 1.73
 ```
 ## Implicit variable declaration
@@ -274,6 +274,8 @@ You will get a compile time error similar to this:
             1
 Error: Symbol 'vairable' at (1) has no IMPLICIT type
 ```
+
+>According to the Fortran95 language standard unless specified otherwise, all variables starting with letters I, J, K, L, M and N are of type integer. All other are by default of type real. Other data types must be explicitly declared. Those defaults can be overridden by implicit TypeName (CharacterRange) statements. However it is considered a good practice to always use the 'implicit none' statement and explicitly declare all variables! 
 
 ## Goto Statements
 
