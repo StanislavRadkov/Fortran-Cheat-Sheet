@@ -121,7 +121,6 @@ p%weight = 70
 ```
 [Play with thеsе examples](http://ideone.com/NZa0FV)
 
-[Ideone]
 ## Operators
 * Arithmetic Operators:
 
@@ -349,7 +348,7 @@ do i = 1, 10, 2
 	write(*,*) "i = ", i
 end do
 ```
-[Play with this examples](http://ideone.com/icbs6X)
+[Play with this example](http://ideone.com/icbs6X)
 
 Output:
 ```fortran
@@ -364,7 +363,7 @@ Implied DO loops are DO loops in the sense that they control the execution of so
 ```fortran
 write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
 ```
-[Play with this examples](http://ideone.com/5iwMoq)
+[Play with this example](http://ideone.com/5iwMoq)
 
 ## Control flow
 If/else statement:
