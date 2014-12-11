@@ -33,6 +33,7 @@ program hello
     write(*,*) 'Hello World!'
 end
 ```
+[Play with this piece of code](http://ideone.com/qco83a)
 
 > Please keep in mind that the language is not case sensitive outside of character literals.
 
@@ -118,7 +119,9 @@ p%name = 'John Doe'
 p%age = 45
 p%weight = 70
 ```
+[Play with thеsе examples](http://ideone.com/NZa0FV)
 
+[Ideone]
 ## Operators
 * Arithmetic Operators:
 
@@ -186,25 +189,27 @@ data arr/1,2,3,4,3*5/
 Access element:
 
 ```fortran
-arr(-2) ! Output: 2
+rite(*,*) arr(-2) ! Output: 2
 ```
 
 Array subset:
 
 ```fortran
-arr(-2:2) ! Output: 2 3 4 5 5
+rite(*,*) arr(-2:2) ! Output: 2 3 4 5 5
 ```
 
 Define a multidimensional array:
 
 ```fortran
-integer, dimension(1:3, 1:3) :: arr
-data arr/1,2,3,4,5,6,7,8,9/
+integer, dimension(1:3, 1:3) :: arr2
+data arr2/1,2,3,4,5,6,7,8,9/
 
-write(*,*) arr(1,1:3) ! Output: 1 4 7   
-write(*,*) arr(1:3,1) ! Output: 1 2 3
-write(*,*) arr(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
+write(*,*) arr2(1,1:3) ! Output: 1 4 7   
+write(*,*) arr2(1:3,1) ! Output: 1 2 3
+write(*,*) arr2(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
 ```
+
+[Play with thеsе examples](http://ideone.com/7PnEsI)
 
 ## Array Operations
 
@@ -242,6 +247,8 @@ write(*,*) m * 2   ! Output: 2.0 4.0 6.0
 write(*,*) m/2     ! Output: 0.5 1.0 1.5   
 write(*,*) sqrt(m) ! Output: 1.00 1.41 1.73
 ```
+[Play with thеsе examples](http://ideone.com/3tpuAG)
+
 ## Implicit variable declaration
 
 Back in the 1950s, when Fortran was first developed, memory was very expensive, and because of this, a typical computer might have only a few KB of main memory. So, programmers wanted their Fortran programs to be as short as possible.
@@ -255,6 +262,7 @@ real :: variable = 0
 vaIRable = 3 + 5 ! wrong name
 write(*,*) variable ! output is 0
 ```
+[Play with this example](http://ideone.com/sGz8FZ)
 
 **You can force explicit variable declaration by either using the "implicit none" statement or by passing a specific parameter to the compiler.**
 
@@ -266,6 +274,7 @@ real :: variable = 0
 vaIRable = 3 + 5 !! 
 write(*,*) variable
 ```
+[Play with this example](http://ideone.com/xofSVP)
 
 You will get a compile time error similar to this:
 
@@ -317,6 +326,7 @@ Output:
 30
 40
 ```
+[Play with these examples](http://ideone.com/7NM1cq)
 
 ## Loops
 
@@ -339,6 +349,8 @@ do i = 1, 10, 2
 	write(*,*) "i = ", i
 end do
 ```
+[Play with this examples](http://ideone.com/icbs6X)
+
 Output:
 ```fortran
  i = 1
@@ -352,6 +364,7 @@ Implied DO loops are DO loops in the sense that they control the execution of so
 ```fortran
 write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
 ```
+[Play with this examples](http://ideone.com/5iwMoq)
 
 ## Control flow
 If/else statement:
@@ -384,6 +397,8 @@ select case (c)
 end select
 ```
 
+[Check out the two examples above](http://ideone.com/gRnvmy)
+
 ## Functions
 
 Defining and calling a function:
@@ -406,6 +421,7 @@ program functions
       
 end program functions
 ```
+[Play with this example](http://ideone.com/c5kxP7)
 
 ## Subroutines
 Subroutines in Fortran do not return a value. Instead they can modify some of their arguments. They must be invoked with the 'call' keyword. The 'intent' statement defines the type of the argument. Input arguments cannot be changed inside the subroutine.
@@ -424,6 +440,8 @@ contains
         k = z + y
     end subroutine sumNumbers
 ```
+
+[Play with this example](http://ideone.com/9MT84n)
 
 ## Modules
 > TODO - Add content
