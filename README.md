@@ -487,8 +487,8 @@ program modules
         
     write(*,*) 'Program using modules'
     v1%a(1) = 1.0
-  v1%a(2) = 1.0
-  v1%a(3) = 0.0
+    v1%a(2) = 1.0
+    v1%a(3) = 0.0
    
     write (*,*) 'Vector magnitude', v1%magnitude
 
