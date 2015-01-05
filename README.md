@@ -33,7 +33,6 @@ program hello
     write(*,*) 'Hello World!'
 end
 ```
-[Play with this piece of code](http://ideone.com/qco83a)
 
 > Please keep in mind that the language is not case sensitive outside of character literals.
 
@@ -72,8 +71,6 @@ than one argument.
 
 ## Type Declaration Statements
 
-
-
 * dimension - Specifies the dimensions (start and end index) of an array.
 * common - Common storage area for variables that are in several program units.
 * data - Puts initial values into variables.
@@ -89,7 +86,7 @@ than one argument.
 * parameter - Defines named constant.
 * pointer - Declares that a variable is a pointer.
 * private - Declares that an object is private to a module.
-* protected = Declares that an object in a module is protected, meaning that it can be used but not modified outside the module in which it is defined.
+* protected - Declares that an object in a module is protected, meaning that it can be used but not modified outside the module in which it is defined.
 * public - Declares that an object is private to a module.
 * save - Declares that an object is private to a module.
 * target - Declares that an object is private to a module.
@@ -119,7 +116,6 @@ p%name = 'John Doe'
 p%age = 45
 p%weight = 70
 ```
-[Play with thеsе examples](http://ideone.com/NZa0FV)
 
 ## Operators
 * Arithmetic Operators:
@@ -208,8 +204,6 @@ write(*,*) arr2(1:3,1) ! Output: 1 2 3
 write(*,*) arr2(1:3,1:3) ! Output:  1 2 3 4 5 6 7 8 9
 ```
 
-[Play with thеsе examples](http://ideone.com/7PnEsI)
-
 ## Array Operations
 
 If we want to add two arrays a and b and put the result in c. We may have something like the following piece of code:
@@ -246,7 +240,6 @@ write(*,*) m * 2   ! Output: 2.0 4.0 6.0
 write(*,*) m/2     ! Output: 0.5 1.0 1.5   
 write(*,*) sqrt(m) ! Output: 1.00 1.41 1.73
 ```
-[Play with thеsе examples](http://ideone.com/3tpuAG)
 
 ## Implicit variable declaration
 
@@ -261,7 +254,6 @@ real :: variable = 0
 vaIRable = 3 + 5 ! wrong name
 write(*,*) variable ! output is 0
 ```
-[Play with this example](http://ideone.com/sGz8FZ)
 
 **You can force explicit variable declaration by either using the "implicit none" statement or by passing a specific parameter to the compiler.**
 
@@ -273,7 +265,6 @@ real :: variable = 0
 vaIRable = 3 + 5 !! 
 write(*,*) variable
 ```
-[Play with this example](http://ideone.com/xofSVP)
 
 You will get a compile time error similar to this:
 
@@ -325,7 +316,6 @@ Output:
 30
 40
 ```
-[Play with these examples](http://ideone.com/7NM1cq)
 
 ## Loops
 
@@ -348,7 +338,6 @@ do i = 1, 10, 2
 	write(*,*) "i = ", i
 end do
 ```
-[Play with this example](http://ideone.com/icbs6X)
 
 Output:
 ```fortran
@@ -363,7 +352,6 @@ Implied DO loops are DO loops in the sense that they control the execution of so
 ```fortran
 write (*,*) (i, i=1, 5) ! Output:  1 2 3 4 5
 ```
-[Play with this example](http://ideone.com/5iwMoq)
 
 ## Control flow
 If/else statement:
@@ -396,8 +384,6 @@ select case (c)
 end select
 ```
 
-[Check out the two examples above](http://ideone.com/gRnvmy)
-
 ## Functions
 
 Defining and calling a function:
@@ -420,7 +406,6 @@ program functions
       
 end program functions
 ```
-[Play with this example](http://ideone.com/c5kxP7)
 
 ## Subroutines
 Subroutines in Fortran do not return a value. Instead they can modify some of their arguments. They must be invoked with the 'call' keyword. The 'intent' statement defines the type of the argument. Input arguments cannot be changed inside the subroutine.
@@ -440,10 +425,77 @@ contains
     end subroutine sumNumbers
 ```
 
-[Play with this example](http://ideone.com/9MT84n)
-
 ## Modules
-> TODO - Add content
+
+Define a module:
+
+```fortran
+module vector
+    implicit none
+    private ! private statement causes all data and subprograms to be hidden
+    
+    type, public :: vectorType
+        integer :: n = 3
+        real :: a(3) ! vector component, array
+        real :: magnitude
+    end type vectorType
+    
+    interface assignment(=)
+        module procedure assignVector
+    end interface
+    
+    public :: magnitude
+    
+    contains
+        subroutine assignVector (left, right)
+            type(vectorType), intent(in) :: right
+            type(vectorType), intent(inout) :: left
+            
+            integer :: i
+            
+            left%n = right%n
+            left%magnitude = right%magnitude
+            
+            do i = 1, right%n
+                left%a(i) = right%a(i)
+            enddo
+            
+        end subroutine assignVector
+    
+        subroutine magnitude (x)
+            type(vectorType), intent(inout) :: x
+            integer :: i
+            
+            x%magnitude = 0.0
+            do i= 1, x%n ! increment is omitted
+                x%magnitude = x%magnitude + x%a(i) * x%a(i)
+            enddo 
+            
+            x%magnitude = sqrt(x%magnitude)
+            
+        end subroutine magnitude 
+    
+end module vector
+```
+
+Use the module:
+```fortran
+program modules
+    use vector
+    implicit none           
+    type(vectorType) :: v1,v2
+        
+    write(*,*) 'Program using modules'
+    v1%a(1) = 1.0
+  v1%a(2) = 1.0
+  v1%a(3) = 0.0
+   
+    write (*,*) 'Vector magnitude', v1%magnitude
+
+    v2 = v1
+    write(*,*) 'Second vector', v2%a
+end program modules
+```
 
 ## File I/O
 > TODO - Add content
