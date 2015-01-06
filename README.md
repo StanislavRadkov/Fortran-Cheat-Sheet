@@ -54,11 +54,10 @@ than one argument.
 
 * **’** (Apostrophe) Editing, declaring a string
 * **"** (Quotation Marks) Declaring a string
-* **\*** (Asterisk) Comment lines.
+* **\*** (Backslash and asterisk) Comment lines.
 * **:** (Colon) Editing.
 * **::** (Double Colon) Separator.
 * **!** (Exclamation) inline comment.
-* **/** (Slash) Skip a line in a fmt statment?
 * **;** (Semicolon) Separates Statement on single source line. Except when it is in a character context.
 * **&** (Ampersand) Line continuation charachter.
 
@@ -457,7 +456,7 @@ module vector
             left%magnitude = right%magnitude
             
             do i = 1, right%n
-                left%a(i) = right%a(i)
+                left%a(i) = right%a(i) 
             enddo
             
         end subroutine assignVector
