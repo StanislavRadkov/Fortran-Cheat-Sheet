@@ -498,7 +498,70 @@ end program modules
 ```
 
 ## File I/O
-> TODO - Add content
+
+Write Pi to a file and open the file to check if the content is written as expected.
+
+```fortran
+program fileIO
+implicit none
+
+    integer :: istat
+    real :: a,b
+    a = 3.142
+
+    ! open a file
+    open(101, file = "out.txt", status = "unknown", action="write", form="formatted", IOSTAT=istat)
+
+    ! check the file
+    if( istat /= 0) then
+        write (*,*) 'Error opening file'
+        return
+    endif
+
+    write(101, '(f0.3)') a
+
+    close(101)
+
+    ! open for reading
+    open(102, file = "out.txt", status = "old", action="read", form="formatted", IOSTAT=istat)
+
+    ! check the file
+    if( istat /= 0) then
+        write (*,*) 'Error opening file'
+        return
+    endif
+
+    read(102, '(f5.3)') b
+    write(*, '(f5.3)') b
+
+    close(102)
+
+    write(*,*) 'A is equal to B: ', a.eq.b
+
+end program fileIO
+```
 
 ## Command line arguments
-> TODO - Add content
+A simple program to read the passed arguments and print them:
+
+```fortran
+program argumentsTest  
+     real(8)    :: A,B
+     integer :: num_args, ix
+     character(len=12), dimension(:), allocatable :: args
+
+     num_args = command_argument_count()
+     allocate(args(num_args))  ! Checking the return status of the allocation is omitted
+     
+     if(.not.allocated(args)) then
+        return
+     endif
+
+     do ix = 1, num_args
+         call get_command_argument(ix,args(ix))
+         ! now parse the argument as you wish
+     end do
+   
+     print*, args
+end program argumentsTest
+```
