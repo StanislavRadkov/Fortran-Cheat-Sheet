@@ -499,7 +499,7 @@ end program modules
 
 ## File I/O
 
-Write Pi to a file and open the file to check if the content is written as expected.
+Write Pi to a file and open the file to check if the content is written as expected:
 
 ```fortran
 program fileIO
