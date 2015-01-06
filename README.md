@@ -64,6 +64,7 @@ than one argument.
 ## Data types
 * integer 
 * real 
+* double precision
 * character
 * logical
 * complex 
