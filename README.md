@@ -546,7 +546,6 @@ A simple program to read the passed arguments and print them:
 
 ```fortran
 program argumentsTest  
-     real(8)    :: A,B
      integer :: num_args, ix
      character(len=12), dimension(:), allocatable :: args
 
