@@ -551,7 +551,7 @@ program argumentsTest
      character(len=12), dimension(:), allocatable :: args
 
      num_args = command_argument_count()
-     allocate(args(num_args))  ! Checking the return status of the allocation is omitted
+     allocate(args(num_args)) 
      
      if(.not.allocated(args)) then
         return
