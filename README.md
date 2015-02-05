@@ -184,13 +184,13 @@ data arr/1,2,3,4,3*5/
 Access element:
 
 ```fortran
-rite(*,*) arr(-2) ! Output: 2
+write(*,*) arr(-2) ! Output: 2
 ```
 
 Array subset:
 
 ```fortran
-rite(*,*) arr(-2:2) ! Output: 2 3 4 5 5
+write(*,*) arr(-2:2) ! Output: 2 3 4 5 5
 ```
 
 Define a multidimensional array:
