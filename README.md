@@ -1,3 +1,6 @@
+![alt text](https://raw.githubusercontent.com/StanislavRadkov/Fortran-Cheat-Sheet/master/FortranCard.jpg "FORTRAN code on a punched card")
+
+
 Fortran Cheat Sheet
 ===================
 This is work in progress. Feel free to contribute :)
