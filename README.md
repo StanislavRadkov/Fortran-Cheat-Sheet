@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/StanislavRadkov/Fortran-Cheat-Sheet/master/FortranCard.jpg "FORTRAN code on a punched card" =450x216 )
+![alt text](https://raw.githubusercontent.com/StanislavRadkov/Fortran-Cheat-Sheet/master/FortranCard.jpg =450x216)
 
 
 Fortran Cheat Sheet
