@@ -352,12 +352,19 @@ Output:
 
 Example of a do while loop:
 ```fortran
-integer:: i = 1, n = 5 
+integer:: i = 1, n = 3 
        
 do while (i <= n)
-  write (*, *) i                
+  write(*,*) "i = ", i                
   i = i + 1
 enddo
+```
+
+Output:
+```fortran
+ i = 1
+ i = 2
+ i = 3
 ```
 
 Implied DO loops are DO loops in the sense that they control the execution of some iterative procedure, but are different than DO loops because they do not use the do statement to control the execution. Basically, these loops are a shorthand that was introduced in FORTRAN to provide a method for array initialization and to cut back on the number of lines of code that where required in the program. Example:
