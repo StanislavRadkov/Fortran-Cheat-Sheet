@@ -62,7 +62,7 @@ than one argument.
 * **::** (Double Colon) Separator.
 * **!** (Exclamation) inline comment.
 * **;** (Semicolon) Separates Statement on single source line. Except when it is in a character context.
-* **&** (Ampersand) Line continuation charachter.
+* **&** (Ampersand) Line continuation character.
 
 ## Data types
 * integer 
